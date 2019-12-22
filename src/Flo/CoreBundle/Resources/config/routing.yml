@@ -1,0 +1,4 @@
+
+flo_core:
+    path:    /
+    defaults: { _controller: FloCoreBundle:Advert:index }

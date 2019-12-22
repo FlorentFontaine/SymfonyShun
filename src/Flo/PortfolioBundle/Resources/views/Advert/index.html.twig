@@ -1,0 +1,11 @@
+{% extends "FloPortfolioBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+  {% block stylesheets %}
+    {# On charge le CSS de bootstrap depuis le site directement #}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+  {% endblock %}
+{% block body %}
+<body style="background-image: url({{ asset('bundles/main.jpg') }}); " alt="avatar";></body>
+{% endblock %}

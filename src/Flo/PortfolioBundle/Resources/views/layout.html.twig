@@ -1,0 +1,90 @@
+{% extends "FloCoreBundle::layout.html.twig" %}
+
+{% block title %}
+  Annonces - {{ parent() }}
+{% endblock %}
+
+  {% block body %}
+        <div class="container-fluid">
+          <div class="row">
+                <div class="search">
+                  <input type="text" class="form-control input-sm" maxlength="64" placeholder="Search" />
+                  <button type="submit"  class="btn btn-primary btn-sm">Search</button>
+                </div>
+          </div>
+        </div>
+        <hr>
+
+
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-3">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Réalisations</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <table class="table">
+                              {{ render(controller("FloPortfolioBundle:Advert:listReal")) }}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Services</a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <table class="table">
+                              {{ render(controller("FloPortfolioBundle:Advert:listService")) }}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">C.V</a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <table class="table">
+                              {{ render(controller("FloPortfolioBundle:Advert:listCv")) }}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-file">
+                            </span>Reports</a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <table class="table">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- block central -->
+        <div id="content" class="col-md-8">
+          {# On définit un nouveau bloc, que les vues du bundle pourront remplir #}
+          {% block floportfolio_body %}
+          {% endblock %}
+        <!--  -->
+        </div>
+    </div>
+</div>
+{% endblock %}

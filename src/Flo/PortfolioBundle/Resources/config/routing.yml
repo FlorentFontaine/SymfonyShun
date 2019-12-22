@@ -1,0 +1,65 @@
+# src/Flo/PortfolioBundle/Resources/config/routing.yml
+
+flo_portfolio_home:
+    path:    /{page}
+    defaults: { _controller: FloPortfolioBundle:Advert:index, page: 1 }
+    requirements:
+        page: \d*
+
+flo_portfolio_list:
+    path:    /list/{page}
+    defaults: { _controller: FloPortfolioBundle:Advert:list, page: 1 }
+    requirements:
+        page: \d*
+
+flo_portfolio_contact:
+    path:    /realisation
+    defaults: { _controller: FloPortfolioBundle:Advert:realisation }
+
+flo_portfolio_real:
+    path:    /real
+    defaults: { _controller: FloPortfolioBundle:Advert:real }        
+
+flo_portfolio_service:
+    path:    /service
+    defaults: { _controller: FloPortfolioBundle:Advert:service }
+
+flo_portfolio_comp:
+    path:    /competence
+    defaults: { _controller: FloPortfolioBundle:Advert:comp }
+
+flo_portfolio_exp:
+    path:    /experience
+    defaults: { _controller: FloPortfolioBundle:Advert:exp }
+
+flo_portfolio_form:
+    path:    /formation
+    defaults: { _controller: FloPortfolioBundle:Advert:form }
+
+
+flo_portfolio_div:
+    path:    /divers
+    defaults: { _controller: FloPortfolioBundle:Advert:div }
+
+flo_portfolio_view:
+    path:    /advert/{id}
+    defaults: { _controller: FloPortfolioBundle:Advert:view, id: 39 }
+    requirements:
+        page: \d+
+
+flo_portfolio_add:
+    path:    /add
+    defaults: { _controller: FloPortfolioBundle:Advert:add }
+
+flo_portfolio_edit:
+    path:    /edit/{id}
+    defaults: { _controller: FloPortfolioBundle:Advert:edit }
+    requirements:
+        id: \d+
+    
+flo_portfolio_delete:
+    path:    /delete/{id}
+    defaults: { _controller: FloPortfolioBundle:Advert:delete }
+    requirements:
+        id: \d+
+    

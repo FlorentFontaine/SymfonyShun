@@ -1,0 +1,5 @@
+{% extends "FloPortfolioBundle::layout.html.twig" %}
+
+          {% block flomenu_body %}
+            {{ render(controller("FloPortfolioBundle:Advert:menu", {'limit': 5})) }}
+          {% endblock %}

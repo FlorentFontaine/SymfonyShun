@@ -1,0 +1,27 @@
+services:
+#    flo_portfolio.example:
+#        class: Flo\PortfolioBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+services:
+                
+    flo_portfolio.email.application_mailer:
+        class: Flo\PortfolioBundle\Email\ApplicationMailer
+        arguments:
+            - "@mailer"
+
+    # flo_portfolio.doctrine_listener.application_creation:
+    #     class: Flo\PortfolioBundle\DoctrineListener\ApplicationCreationListener
+    #     arguments:
+    #         - "flo_portfolio.email.application_mailer"
+    #     tags:
+    #         - { name: doctrine.event_listener, event: postPersist }
+          
+    flo_portfolio.antispam:
+        class: Flo\PortfolioBundle\Antispam\FloAntispam
+        arguments:
+            - "@mailer"
+            - %locale%
+            - 50
+
+

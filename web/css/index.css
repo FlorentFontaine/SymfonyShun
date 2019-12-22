@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+@font-face {
+ font-family: "Economica";
+ src: url("../fonts/OpenSansCondensed-Light.ttf");
+}
+
+html{
+    margin: 0%;
+    padding: 0%;
+}
+
+.home {
+    background-image: url('../bundles/home.jpg');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: auto;
+    height: 100vh;
+    box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.4);
+    color:rgb(86, 190, 196);
+}
+
+.navbar-inverse {
+   display: absolute;
+   background-color: transparent;
+   border:none;
+}
+#navbar6{
+    border:none;
+ }
+
+.container{
+    margin-top: 40px;
+    background-color: none;
+}
+img{
+    width:20%;
+    background-repeat: no-repeat;
+    box-shadow: 0px 12px 10px -10px rgba(0,0,0,0.7);
+}
+.col-xs-2 img {
+display: none;
+}
+footer {
+    display: none;
+}

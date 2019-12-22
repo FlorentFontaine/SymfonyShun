@@ -1,0 +1,74 @@
+{# Flo/CoreBundle/Resources/views/layout.html.twig #}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% block title %} Floshunrik {% endblock %}</title>
+
+  {% block stylesheets %}
+    {# On charge le CSS de bootstrap depuis le site directement #}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+  {% endblock %}
+</head>
+
+<body>
+<div class="home">
+  <nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <img src="{{ asset ('bundles/profil.jpg') }}" class="logo" alt="avatar";>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar6">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div id="navbar6" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ path('flo_shunrik_homepage') }}">Accueil</a></li>
+        <li><a href="{{ path('flo_shunrik_contact') }}">Contact</a></li>
+        <li><a href="#">About</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Gestion <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="{{ path('flo_shunrik_add') }}">Ajout</a></li>
+            <li><a href="{{ path('flo_shunrik_real') }}">Réalisations</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">C.V.</li>
+            <li><a href="{{ path('flo_shunrik_comp') }}">Compétence</a></li>
+            <li><a href="{{ path('flo_shunrik_exp') }}">Expériences</a></li>
+            <li><a href="{{ path('flo_shunrik_form') }}">Formations</a></li>
+            <li><a href="{{ path('flo_shunrik_div') }}">Divers</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div></div>
+    <!--/.nav-collapse -->
+  </div>
+  <!--/.container-fluid -->
+</nav>
+
+</div>
+        {% block body %}
+        {% endblock %}
+
+    <div class="container-fluid">
+    <footer>
+      <div class="row">
+      <div class="col-lg-12">Florent Fontaine © {{ 'now'|date('Y') }}</div>
+      </div>
+    </footer>
+</div>
+  {% block javascripts %}
+    {# Ajoutez ces lignes JavaScript si vous comptez vous servir des fonctionnalités du bootstrap Twitter #}
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+  {% endblock %}
+
+</body>
+</html>

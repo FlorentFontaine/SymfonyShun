@@ -1,0 +1,61 @@
+flo_shunrik_homepage:
+    path:     /
+    defaults: { _controller: FloShunrikBundle:Advert:index }
+
+flo_shunrik_list:
+    path:    /list/{page}
+    defaults: { _controller: FloShunrikBundle:Advert:list, page: 1 }
+    requirements:
+        page: \d*
+
+flo_shunrik_contact:
+    path:    /realisation
+    defaults: { _controller: FloShunrikBundle:Advert:realisation }
+
+flo_shunrik_real:
+    path:    /real
+    defaults: { _controller: FloShunrikBundle:Advert:real }        
+
+flo_shunrik_service:
+    path:    /service
+    defaults: { _controller: FloShunrikBundle:Advert:service }
+
+flo_shunrik_comp:
+    path:    /competence
+    defaults: { _controller: FloShunrikBundle:Advert:comp }
+
+flo_shunrik_exp:
+    path:    /experience
+    defaults: { _controller: FloShunrikBundle:Advert:exp }
+
+flo_shunrik_form:
+    path:    /formation
+    defaults: { _controller: FloShunrikBundle:Advert:form }
+
+
+flo_shunrik_div:
+    path:    /divers
+    defaults: { _controller: FloShunrikBundle:Advert:div }
+
+flo_shunrik_view:
+    path:    /advert/{id}
+    defaults: { _controller: FloShunrikBundle:Advert:view }
+    requirements:
+        page: \d+
+
+flo_shunrik_add:
+    path:    /add
+    defaults: { _controller: FloShunrikBundle:Advert:add }
+
+flo_shunrik_edit:
+    path:    /edit/{id}
+    defaults: { _controller: FloShunrikBundle:Advert:edit }
+    requirements:
+        id: \d+
+    
+flo_shunrik_delete:
+    path:    /delete/{id}
+    defaults: { _controller: FloShunrikBundle:Advert:delete }
+    requirements:
+        id: \d+
+    

@@ -1,0 +1,28 @@
+{% extends "FloShunrikBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Index{% endblock %}
+  {% block stylesheets %}
+    {# On charge le CSS de bootstrap depuis le site directement #}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+  {% endblock %}
+  
+{% block body %}
+<body >
+<div>
+      <table class="table">
+{% if listAdverts is defined %}
+  {% for advert in listAdverts %}
+  <label>{{ advert.title }}</label>
+
+<audio controls="controls" preload="none">
+  <source src="../../bundles/{{ advert.filename }}" type="audio/mp3" />
+  Votre navigateur n'est pas compatible
+</audio></br>
+
+  {% endfor %}
+{% endif%}
+      </table>
+</div>
+</body>
+{% endblock %}

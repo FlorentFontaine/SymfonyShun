@@ -1,0 +1,17 @@
+{# src/Flo/PortfolioBundle/Resources/views/Advert/list.html.twig #}
+
+{% extends "FloPortfolioBundle::layout.html.twig" %}
+
+{#  #}
+
+{% block floportfolio_body %}
+<ul class="pagination">
+  {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+  {% for p in range(1, nbPages) %}
+    <li{% if p == page %} class="active"{% endif %}>
+      <a href="{{ path('flo_portfolio_list', {'page': p}) }}">{{ p }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

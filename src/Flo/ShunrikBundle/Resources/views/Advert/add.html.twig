@@ -1,0 +1,15 @@
+{% extends "FloShunrikBundle::layout.html.twig" %}
+
+
+{% block floshunrik_body %}
+
+  <h2>Ajouter une annonce</h2>
+
+  {{ include("FloShunrikBundle:Advert:form.html.twig") }}
+
+  <p>
+    Attention : cette annonce sera ajoutée directement
+    sur la page d'accueil après validation du formulaire.
+  </p>
+
+{% endblock %}

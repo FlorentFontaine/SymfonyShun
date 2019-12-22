@@ -1,0 +1,12 @@
+flo_core:
+    resource: "@FloCoreBundle/Resources/config/routing.yml"
+    prefix:    /
+
+flo_portfolio:
+    resource: "@FloPortfolioBundle/Resources/config/routing.yml"
+    prefix:   /portfolio
+
+
+flo_shun:
+    resource: "@FloShunrikBundle/Resources/config/routing.yml"
+    prefix:   /shunrik

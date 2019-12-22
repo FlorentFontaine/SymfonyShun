@@ -1,0 +1,32 @@
+{# Ce template n'hérite de personne,
+   tout comme le template inclus avec {{ include() }}. #}
+   
+{% if listAdverts is defined %}
+  {% for advert in listAdverts %}
+                                <tr>
+                                    <td>                                        
+      <a href="{{ path('flo_shunrik_view', {'id': advert.id}) }}">{{ advert.title }}
+                                    </td>
+                                </tr>
+  {% endfor %}
+{% endif%}
+
+{% if listServices is defined %}
+  {% for service in listServices %}
+                                <tr>
+                                    <td>                                        
+      <a href="{{ path('flo_shunrik_view', {'id': service.id}) }}">{{ service.title }}
+                                    </td>
+                                </tr>
+  {% endfor %}
+{% endif%}
+
+{% if listCv is defined %}
+  {% for cv in listCv %}
+                                <tr>
+                                    <td>                                        
+      <a href="{{ path('flo_shunrik_view', {'id': cv.id}) }}">{{ cv.title }}
+                                    </td>
+                                </tr>
+  {% endfor %}
+{% endif%}

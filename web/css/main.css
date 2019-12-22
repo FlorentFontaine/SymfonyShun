@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+@font-face {
+ font-family: "Economica";
+ src: url("../fonts/OpenSansCondensed-Light.ttf");
+}
+
+html{
+    margin: 0%;
+    padding: 0%;
+}
+body {
+    background-size: 100%;
+    background-color:#DDD;
+ }
+
+  [class*="col-"], footer p {
+    text-align: center;
+    color:rgb(86, 190, 196);
+    font-family: "Economica";
+  }
+#content{
+    background-color: white;
+    border-radius: 4px;
+    border:none;
+    margin-top: 46px;
+    margin-bottom: 20px;
+    padding-bottom:40px;
+    padding-top:10px;
+}
+
+a{
+    color:rgb(86, 190, 196);
+}
+h3{
+    margin-top: 0;
+}
+
+.logo{
+    position: absolute;
+    width:150px;
+    top:0;
+    left:50px;
+    box-shadow: 0px 12px 10px -10px rgba(0,0,0,0.7);
+}
+.navbar{
+    font-family: "Economica";
+    background-repeat: no-repeat;
+    background-size: 100vh;
+    background-position: center;
+    background-color:rgb(18, 27, 26);
+    box-shadow: 0px 12px 10px -10px rgba(0,0,0,0.7);
+    padding-bottom: 20px;
+}
+
+.navbar li {
+    font-size: 16px;
+    color:rgb(86, 190, 196);
+}
+
+.container {
+    margin-top:40px;
+}
+#menu .nav > li > a {
+    padding:0;
+    color:white;
+    margin:10px;
+    padding-left: 50px;
+    background-color: gray;
+    line-height: 60px;
+    border:none;
+    box-shadow: 0px 12px 10px -10px rgba(0,0,0,0.7);
+}
+
+#menu .nav > li > a:hover {
+    background-color: rgb(18, 27, 26);
+    box-shadow: 0px 12px 10px -10px rgba(0,0,0,0.7);
+}
+
+#menu {
+    text-align: left;
+    margin-left: 20px;
+}
+#head ul{
+ font-size: 15px;
+ margin: 0;
+}
+
+.contain{
+    padding-top: 40px;
+}
+.contain .row{
+    margin-right: 0;
+}
+.well{
+    margin: 30px;
+}
+
+/*----------search-----------------*/
+
+#search {
+    float: right;
+    margin-top: 9px;
+    width: 250px;
+}
+
+.search {
+    padding: 5px 0;
+    width: 10%;
+    float: right;
+    height: 30px;
+    position: relative;
+    line-height: 22px;
+}
+
+.search input {
+    position: absolute;
+    width: 0px;
+    right:20px;
+    float: right;
+    margin-left: 210px;
+    transition: all 0.7s ease-in-out;
+    height: 30px;
+    line-height: 18px;
+    padding: 0 2px 0 2px;
+    border-radius:1px;
+}
+
+.search:hover input, .search input:focus {
+    width: 200px;
+    margin-left: 0px;
+}
+
+button {
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    border-radius:1px;
+    margin-right: 20px;
+}
+
+#accordion{
+    margin-top: 46px;
+}
+
+
+/*---------form---------------*/
+
+.form-control {
+    /* margin:auto;     */
+}
+.form-horizontal .form-group {
+    font-size: 15px;    
+}
+.save{
+    position:relative;
+    height: 50px;
+}
+.save button{
+    width: 80px;
+    height: 35px;
+}
+.form-horizontal .control-label {
+    font-weight: lighter;
+}
+
+.form-horizontal .control-label h3{
+    text-align: center;
+}
+#content img{
+    width: 150px;
+}
